@@ -19,10 +19,10 @@ class EventsService {
 
     getAllEvents(queries) {
         if (queries) {
-            const { country, city, date, address, skip } = queries;
-
+            const { country, city, date, address, hosts, skip } = queries;
+            console.log(queries);
             return this.api.get(
-                `/?country=${country}&city=${city}&date=${date}&address=${address}&skip=${skip}`
+                `/?country=${country}&city=${city}&date=${date}&address=${address}&hosts=${hosts}&skip=${skip}`
             );
         } else return this.api.get(`/`);
     }

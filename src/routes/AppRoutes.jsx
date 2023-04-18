@@ -3,7 +3,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoutes";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import ConcertsListPage from "../pages/ConcertsListPage/ConcertsListPage";
-import EventDetails from "../components/EventDetails/EventDetails";
+import EventDetails from "../components/EventDetails/EventDetails.jsx";
 const AppRoutes = () => {
     return (
         <Routes>
