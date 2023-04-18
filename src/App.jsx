@@ -3,7 +3,7 @@ import AppRoutes from "./routes/AppRoutes";
 
 function App() {
     const styles = {
-        height: "calc(100vh - 88px)",
+        minHeight: "calc(100vh - 64px)",
     };
 
     return (

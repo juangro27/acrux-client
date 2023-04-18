@@ -1,8 +1,6 @@
 import axios from "axios";
 
 class AuthService {
-    static _instance;
-
     constructor() {
         this.api = axios.create({
             baseURL: `${process.env.REACT_APP_API_URL}/auth`,

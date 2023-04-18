@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoutes";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import ConcertsListPage from "../pages/ConcertsListPage/ConcertsListPage";
+import EventDetails from "../components/EventDetails/EventDetails";
 const AppRoutes = () => {
     return (
         <Routes>
@@ -10,11 +13,15 @@ const AppRoutes = () => {
             />
             <Route
                 path="/concerts"
-                element={<p>concerts</p>}
+                element={<ConcertsListPage />}
+            />
+            <Route
+                path="/concerts/:id"
+                element={<EventDetails />}
             />
             <Route
                 path="/login"
-                element={<p>login</p>}
+                element={<LoginPage />}
             />
             <Route element={<PrivateRoute />}>
                 <Route
