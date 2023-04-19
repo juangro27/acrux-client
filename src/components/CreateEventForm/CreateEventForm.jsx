@@ -68,10 +68,10 @@ const CreateEventForm = () => {
         <>
             <form
                 encType="multipart/form-data"
-                className="w-full md:px-40 lg:px-80"
+                className="w-full  md:px-40 lg:px-80"
                 onSubmit={handleSubmit}
             >
-                <div className="grid grid-cols-1  sm:grid-cols-6 mt-10 px-10 sm:px-20 m w-full ">
+                <div className="grid grid-cols-1  sm:grid-cols-6 px-10 sm:px-20  w-full ">
                     {errors.length >= 1 && (
                         <h1 className="bg-red-700 text-zinc-50 text-center rounded-md py-2">
                             {errors}
