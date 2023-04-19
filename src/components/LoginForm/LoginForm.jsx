@@ -1,6 +1,6 @@
 import { LockClosedIcon } from "@heroicons/react/20/solid";
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth.context";
 import authService from "../../services/auth.service";
 
@@ -24,7 +24,6 @@ const LoginForm = () => {
             authenticateUser();
             navigate("/");
         } catch (err) {
-            console.log(err);
             setErrors(err.response.data.errorMessages);
         }
     };
@@ -95,6 +94,16 @@ const LoginForm = () => {
                             </span>
                             Sign in
                         </button>
+                        <p className="mt-10 text-center text-sm text-gray-500">
+                            Not a member?
+                            <Link
+                                to={"/signup"}
+                                className="font-semibold leading-6
+                            text-teal-600 hover:text-teal-500 ps-1"
+                            >
+                                Sign Up
+                            </Link>
+                        </p>
                     </div>
                 </form>
             </div>

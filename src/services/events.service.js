@@ -18,13 +18,18 @@ class EventsService {
     }
 
     getAllEvents(queries) {
+        const queryObj = {};
         if (queries) {
             const { country, city, date, address, hosts, skip } = queries;
-            console.log(queries);
-            return this.api.get(
-                `/?country=${country}&city=${city}&date=${date}&address=${address}&hosts=${hosts}&skip=${skip}`
-            );
-        } else return this.api.get(`/`);
+            if (country) queryObj.country = country;
+            if (city) queryObj.city = city;
+            if (date) queryObj.date = date;
+            if (address) queryObj.address = address;
+            if (hosts) queryObj.hosts = hosts;
+            if (skip) queryObj.skip = skip;
+        }
+        const queryString = new URLSearchParams(queryObj).toString();
+        return this.api.get(`/?${queryString}`);
     }
 
     createEvent(data) {

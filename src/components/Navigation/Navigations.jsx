@@ -10,12 +10,15 @@ const Navigation = () => {
 
     const navigation = [
         { name: "Home", href: "/" },
-        { name: "Login", href: "/login" },
         { name: "Concerts", href: "/concerts" },
+        { name: "Login", href: "/login" },
+        { name: "Signup", href: "/signup" },
     ];
 
     const navigationLogged = [
         { name: "Home", href: "/" },
+        { name: "Concerts", href: "/concerts" },
+        { name: "Create", href: "/concerts/create" },
         { name: "Logout", href: "/logout" },
     ];
 

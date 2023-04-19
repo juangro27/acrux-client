@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Carousel from "../Carousel/Carousel";
 import eventsService from "../../services/events.service";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 
 const EventDetails = () => {
+    const navigate = useNavigate();
+
     const { id } = useParams();
     const [isLoading, setIsLoading] = useState(true);
     const [event, setEvent] = useState(null);
@@ -14,10 +16,14 @@ const EventDetails = () => {
     }, []);
 
     const getEvent = async () => {
-        const data = await eventsService.getEvent(id);
-        const { data: eventData } = data;
-        setEvent(eventData);
-        setIsLoading(false);
+        try {
+            const data = await eventsService.getEvent(id);
+            const { data: eventData } = data;
+            setEvent(eventData);
+            setIsLoading(false);
+        } catch (err) {
+            navigate("/error");
+        }
     };
     return (
         <>
