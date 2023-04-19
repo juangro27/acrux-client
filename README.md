@@ -19,7 +19,7 @@
 <!--- Instructions --->
 <h2 align="center">Instructions</h2>
 <p>To use this repository, please follow these steps:</p>
-Clone the repository on your local machine by running the following command:
+Clone the repository on your local machine by running the following command (Change 'TU_USUARIO'):
 
 ```
 git clone https://github.com/TU_USUARIO/acrux-client.git
