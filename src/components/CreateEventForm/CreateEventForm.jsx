@@ -269,14 +269,14 @@ const CreateEventForm = () => {
                     <div className="sm:col-span-6 mt-6 lg:flex justify-between items-center">
                         <button
                             type="submit"
-                            className="lg me-4 flex w-full justify-center rounded-md bg-teal-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+                            className="lg:me-4 flex w-full justify-center rounded-md bg-teal-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
                             disabled={isUploading ? "true" : ""}
                         >
                             Create
                         </button>
                         <Link
                             to={"/concerts"}
-                            className="lg ms-4 flex w-full my-6 justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                            className="lg:ms-4 flex w-full my-6 justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                         >
                             Back
                         </Link>
