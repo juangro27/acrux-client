@@ -11,7 +11,7 @@
   This is a repository that contains the solution for the technical challenge by Akralogic for the Frontend Developer position.  
   This is a web application that allows users to view and create concert events. The app includes two main pages: a page that lists all of the concerts, and a detail page that displays information about a specific concert. Users can also create a new concert from the home page by clicking on the "Add Concert" button.
   <br>
-  <str>To view the deployed the technical challenge, click <a href="https://acrux.vercel.app/">here</a></str>.
+  <h2 align="center">To view the deployed the technical challenge, click <a href="https://acrux.vercel.app/">here</a></h2>.
   
   
 </div>
